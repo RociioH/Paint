@@ -12,7 +12,7 @@ public class Circulo extends FiguraDelim{
 	}//fin del constructor sin parametros
 		
 	//constructor con parametros
-	public MiOvalo ( int x1, int y1, int width, int height, Paint miColor, Stroke estilo , boolean r ){
+	public Circulo ( int x1, int y1, int width, int height, Paint miColor, Stroke estilo , boolean r ){
 		super( x1, y1, width, height, miColor, estilo,  r);
 		
 	}//fin del constructor
@@ -33,4 +33,4 @@ public class Circulo extends FiguraDelim{
 
 	
 
-}//fin de la clase MiOvalo
+}//fin de la clase Circulo
