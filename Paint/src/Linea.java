@@ -1,5 +1,5 @@
 
-//La clase Linea representa a una linea.
+//La clase Linea dibuja a una linea.
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -12,7 +12,7 @@ public class Linea extends Figura{
 		this(0, 0, 0, 0, Color.BLACK, new BasicStroke ());
 	}
 		
-	//constructor con valores de entrada
+	//constructor 
 	public Linea( int x1, int y1, int x2, int y2, Paint color, Stroke estilo ){
 		super (x1, y1 , x2 , y2, color, estilo);
 		
@@ -20,11 +20,10 @@ public class Linea extends Figura{
 	
 		
 	//pendiente
-	public void dibujar ( Graphics2D g ){
-		g.setPaint( obtenerColor() );
-		g.setStroke( obtenerStroke() );
-		g.drawLine( obtenerX1(), obtenerY1(), obtenerX2(), obtenerY2());
+	public void Dibujar ( Graphics2D g2D ){
+		g2D.setPaint( EstablecerColor() );
+		g2D.setStroke( obtenerStroke() );
+		g2D.drawLine( CoordenadaX1(), CoordenadaY1(), CoordenadaX2(), CoordenadaY2());
 		
-	}//fin del metodo dibujar 
-	
+	}//fin del metodo Dibujar 	
 }//fin de la clase Linea

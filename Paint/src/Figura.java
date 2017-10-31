@@ -29,7 +29,7 @@ public abstract class Figura {
         establecerColor(color);
         stroke = estilo;
     }
-//c) Métodos establecer para las coordenadas individuales y el color, que permiten al programador establecer cualquier pieza de datos de manera independiente, para una figura en la jerarquía.
+//c) Métodos determinar para las coordenadas individuales y el color, que permiten al programador establecer cualquier pieza de datos de manera independiente, para una figura en la jerarquía.
     public void DeterminarX1(int x1) {
         if (x1 >= 0) {
             this.x1 = x1;
@@ -38,7 +38,7 @@ public abstract class Figura {
         }
     }
 //d) Métodos obtener para las coordenadas individuales y el color, que permiten al programador obtener cualquier pieza de datos de manera independiente, para una figura en la jerarquía.
-    public int obtenerX1() {
+    public int CoordenadaX1() {
         return x1;
     }
 
@@ -50,7 +50,7 @@ public abstract class Figura {
         }
     }
 
-    public int obtenerX2() {
+    public int CoordenadaX2() {
         return x2;
     }
 
@@ -62,7 +62,7 @@ public abstract class Figura {
         }
     }
 
-    public int obtenerY1() {
+    public int CoordenadaY1() {
         return y1;
     }
 
@@ -74,7 +74,7 @@ public abstract class Figura {
         }
     }
 
-    public int obtenerY2() {
+    public int CoordenadaY2() {
         return y2;
     }
 
@@ -82,7 +82,7 @@ public abstract class Figura {
         color = colores;
     }
 
-    public Paint obtenerColor() {
+    public Paint EstablecerColor() {
         return color;
     }
 
@@ -93,7 +93,7 @@ public abstract class Figura {
     public Stroke obtenerStroke() {
         return stroke;
     }
-//e) El método abstract public abstract void dibujar (Graphics g); que se llamará desde el método paintComponent del programa para dibujar una figura en la pantalla.
+//e) El método abstract public abstract void Dibujar (Graphics g); que se llamará desde el método paintComponent del programa para Dibujar una figura en la pantalla.
 
-    public abstract void dibujar(Graphics2D g);
+    public abstract void Dibujar(Graphics2D g);
 }
