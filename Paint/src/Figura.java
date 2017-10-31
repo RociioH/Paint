@@ -22,15 +22,15 @@ public abstract class Figura {
 
 //b) Un constructor que inicialice las coordenadas y el color con los valores de los argumentos suministrados.
     public Figura(int x1, int y1, int x2, int y2, Paint color, Stroke estilo) {
-        establecerX1(x1);
-        establecerY1(y1);
-        establecerX2(x2);
-        establecerY2(y2);
+        DeterminarX1(x1);
+        DeterminarY1(y1);
+        DeterminarX2(x2);
+        DeterminarY2(y2);
         establecerColor(color);
         stroke = estilo;
     }
 //c) Métodos establecer para las coordenadas individuales y el color, que permiten al programador establecer cualquier pieza de datos de manera independiente, para una figura en la jerarquía.
-    public void establecerX1(int x1) {
+    public void DeterminarX1(int x1) {
         if (x1 >= 0) {
             this.x1 = x1;
         } else {
@@ -42,7 +42,7 @@ public abstract class Figura {
         return x1;
     }
 
-    void establecerX2(int x2) {
+    void DeterminarX2(int x2) {
         if (x2 >= 0) {
             this.x2 = x2;
         } else {
@@ -54,7 +54,7 @@ public abstract class Figura {
         return x2;
     }
 
-    public void establecerY1(int y1) {
+    public void DeterminarY1(int y1) {
         if (y1 >= 0) {
             this.y1 = y1;
         } else {
@@ -66,7 +66,7 @@ public abstract class Figura {
         return y1;
     }
 
-    public void establecerY2(int y2) {
+    public void DeterminarY2(int y2) {
         if (y2 >= 0) {
             this.y2 = y2;
         } else {
