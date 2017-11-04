@@ -20,8 +20,8 @@ public class Circulo extends FiguraDelim{
 	
 	//implementacion del metodo dibujar
 	@Override
-	public void dibujar ( Graphics2D g ){
-		g.setPaint( obtenerColor() );
+	public void Dibujar ( Graphics2D g ){
+		g.setPaint( EstablecerColor() );
 		g.setStroke( obtenerStroke() );
 		
 		if ( obtenerRelleno() == true )

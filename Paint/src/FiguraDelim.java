@@ -13,7 +13,7 @@ public abstract class FiguraDelim extends Figura {
 		this(0, 0, 0, 0, Color.BLACK, new BasicStroke(), false );
 	}
 	
-	public MiFiguraDelimitada (int x1, int y1 , int width, int height, Paint miColor, Stroke estilo, boolean r ){
+	public FiguraDelim (int x1, int y1 , int width, int height, Paint miColor, Stroke estilo, boolean r ){
 		super(x1, y1, width, height, miColor, estilo);
 		relleno = r;
 	}
@@ -29,20 +29,20 @@ public abstract class FiguraDelim extends Figura {
 	 * LEER EL LIBRO PARA VER SI ESTOS VALORES SON CORRECTOS
 	 */
 	public int obtenerXSupIzq (){
-		return Math.min( obtenerX1(), obtenerX2() );
+		return Math.min( CoordenadaX1(), CoordenadaX2() );
 	}
 	public int obtenerYSupIzq (){
-		return Math.min( obtenerY1(), obtenerY2() );
+		return Math.min( CoordenadaY1(), CoordenadaY2() );
 	}
 	public int obtenerAnchura (){
-		return Math.abs( obtenerX1() - obtenerX2() );
+		return Math.abs( CoordenadaX1() - CoordenadaX2() );
 	}
 	public int obtenerAltura (){
-		return Math.abs( obtenerY1() - obtenerY2() );
+		return Math.abs( CoordenadaY1() - CoordenadaY2() );
 	}
 	
 	@Override
-	public abstract void dibujar ( Graphics2D g2d );
+	public abstract void Dibujar ( Graphics2D g2d );
 		
 	
 	
