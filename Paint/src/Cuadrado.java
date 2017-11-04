@@ -17,7 +17,13 @@ public class Cuadrado extends FiguraDelim{
 	//implementacion del metodo dibujar
 	@Override
 	public void Dibujar ( Graphics2D g ){
+		g.setPaint( EstablecerColor() );
+		g.setStroke( obtenerStroke() );
 		
+		if ( obtenerRelleno() == true )
+			g.fillRect( obtenerXSupIzq(), obtenerYSupIzq(), obtenerAnchura(), obtenerAltura() );
+		else
+			g.drawRect( obtenerXSupIzq(), obtenerYSupIzq(), obtenerAnchura(), obtenerAltura() );
 	}//fin del metodo dibujar 
 	
 
