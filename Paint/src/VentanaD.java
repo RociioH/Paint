@@ -84,7 +84,22 @@ private JPanel panelFiguras, panelJava2D, panelNorte;
         });
 
         rellenoJCheckBox = new JCheckBox("Filled");
-   
+        rellenoJCheckBox.addItemListener(
+                new ItemListener() {
+
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                // TODO Auto-generated method stub
+
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    panelDibujo.establecerFiguraRellena(true);
+                } else {
+                    panelDibujo.establecerFiguraRellena(false);
+                }
+
+            }
+
+        });
 
         panelFiguras.add(botonUndoJButton);
         panelFiguras.add(botonClearJButton);
@@ -111,7 +126,15 @@ private JPanel panelFiguras, panelJava2D, panelNorte;
 
         });
 
+        panelJava2D.add(color1Java2DJButton);
+//		
+        panelNorte.add(panelJava2D);
 
+        add(panelNorte, BorderLayout.NORTH);
+
+        add(panelDibujo, BorderLayout.CENTER);
+
+        add(barraEstado, BorderLayout.SOUTH);
 
     }//fin de constructor MarcoDibujo
 }
