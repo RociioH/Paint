@@ -16,25 +16,26 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-public class VentanaD {
+public class VentanaD extends JFrame{
     
 private JPanel panelFiguras, panelJava2D, panelNorte;
 
-    private PanelDibujo panelDibujo;
+    private Dibujo panelDibujo;
 
     //componentes de panelFiguras 
     private JButton botonUndoJButton, botonClearJButton;
     private JComboBox coloresJComboBox, tipoFiguraJComboBox;
     private JCheckBox rellenoJCheckBox;
     private JButton color1Java2DJButton;
-    private static final String[] nombresFiguras = {"Lineas", "Ovalos", "Rectangulos"};
+    private static final String[] nombresFiguras = {"Lineas", "Circulos", "Rectangulos"};
 
     //constructor
-    public VentanaD() {
-        super("Paint");
+    public VentanaD(){
+        
+        super("");
 
         JLabel barraEdo = new JLabel();
-        panelDibujo = new PanelDibujo(barraEdo);
+        panelDibujo = new Dibujo(barraEdo);
 
         panelNorte = new JPanel();
         panelNorte.setLayout(new GridLayout(2, 1));
@@ -120,7 +121,7 @@ private JPanel panelFiguras, panelJava2D, panelNorte;
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                panelDibujo.establecerColor1(JColorChooser.showDialog(MarcoDibujo.this, "Escoge el color 1", Color.BLACK));
+                panelDibujo.establecerColor1(JColorChooser.showDialog(VentanaD.this, "Escoge el color 1", Color.BLACK));
 
             }
 
@@ -134,7 +135,7 @@ private JPanel panelFiguras, panelJava2D, panelNorte;
 
         add(panelDibujo, BorderLayout.CENTER);
 
-        add(barraEstado, BorderLayout.SOUTH);
+        add(barraEdo, BorderLayout.SOUTH);
 
     }//fin de constructor MarcoDibujo
 }
